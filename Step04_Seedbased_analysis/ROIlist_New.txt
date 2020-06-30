@@ -1,0 +1,8 @@
+L_Amyg_aal_cytomap_roi
+R_Amyg_aal_cytomap_roi
+L_Amygdala_CM
+L_Amygdala_LB
+R_Amygdala_CM
+R_Amygdala_LB
+SFA_L
+SFA_R
