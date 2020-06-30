@@ -1,0 +1,22 @@
+DATA:
+  FILE IS 178GYS203.dat;
+VARIABLE:
+  NAMES ARE IDz Sno nomber IDf AGE border SEX type D4 D34 T4 
+  T34 YSR3 MN2 MP2 LES2 lamys12 lamys13 lamys14 lamys52 
+  lamys53 lamys54 lamy14 lamy16 lamy54 lamy56 lamy58;
+
+ usevariables=AGE SEX  D34 T34 MN2 LES2 lamy14;
+
+
+  ANALYSIS:
+
+        bootstrap=1000;
+
+  MODEL:
+
+              D34 on lamy14 MN2 LES2 T34 SEX AGE;
+              lamy14 on MN2 LES2 SEX AGE;
+
+        model indirect:D34 ind lamy14 MN2;
+
+   OUTPUT:sampstat cinterval(bcbootstrap);
